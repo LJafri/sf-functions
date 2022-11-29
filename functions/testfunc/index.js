@@ -19,7 +19,7 @@ export default async function (event, context, logger) {
   // logger.info(JSON.stringify(results));
 
   // return results;
-
+  console.log('Logg info ' + event.data);
   const { priority, subject, description } = event.data;
   if (!subject) {
     throw new Error(`Please provide Subject`);
